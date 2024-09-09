@@ -1,6 +1,25 @@
-<html>
+<!-- HTML formatting that I added in for fun. Shoutout to ChatGPT for the help -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Simple Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>N8's Magical Calculator</h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; /* Light gray background */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #4CAF50; /* Green color */
+            border-bottom: 2px solid #4CAF50; /* Green underline */
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -39,10 +58,10 @@
         <option value="Pythagorean">Pythagorean</option>
     </select><br><br>
 
-    <input type="submit" value="Calculate">
+    <input type="submit" value="Calculate"><br>
 </form>
 
-<a href="index.php">Reset</a>
+<a href="index.php"><br>Reset</a>
 
 <?php
 // Task 5: Checking if the form has been submitted and processing accordingly
