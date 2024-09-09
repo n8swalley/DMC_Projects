@@ -23,6 +23,25 @@
     <input type="submit" value="Divide">
 </form>
 
+<!-- Task 9: Combine into 1 form -->
+<h2>Unified Calculator</h2>
+<form method="get">
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" name="num1" required><br><br>
+
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" name="num2" required><br><br>
+
+    <label for="operation">Select Operation:</label>
+    <select id="operation" name="operation" required>
+        <option value="Add">Add</option>
+        <option value="Divide">Divide</option>
+        <option value="Pythagorean">Pythagorean</option>
+    </select><br><br>
+
+    <input type="submit" value="Calculate">
+</form>
+
 <a href="index.php">Reset</a>
 
 <?php
@@ -48,6 +67,11 @@ if (isset($_GET['operation']) && isset($_GET['num1']) && isset($_GET['num2'])) {
             echo "<h2>Division Result</h2>";
             echo "<p>The result of dividing {$num1} by {$num2} is: {$result}</p>";
         }
+    } elseif ($operation === "Pythagorean") {
+        // Pythagorean Theorem Operation (Task 9)
+        $hypotenuse = sqrt(($num1 ** 2) + ($num2 ** 2));
+        echo "<h2>Pythagorean Theorem Result</h2>";
+        echo "<p>The length of the hypotenuse is: {$hypotenuse}</p>";
     }
 }
 ?>
